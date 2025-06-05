@@ -3,5 +3,3 @@ pymongo
 pandas
 numpy
 certifi
-
-# -e .
