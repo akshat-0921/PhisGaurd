@@ -1,0 +1,6 @@
+[ 2025-06-07 09:09:40,905 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-07 09:09:40,910 ] 107 dagshub - INFO - Accessing as akshat-0921
+[ 2025-06-07 09:09:42,024 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/akshat-0921/security "HTTP/1.1 200 OK"
+[ 2025-06-07 09:09:43,143 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-06-07 09:09:43,145 ] 107 dagshub - INFO - Initialized MLflow to track repo "akshat-0921/security"
+[ 2025-06-07 09:09:43,147 ] 107 dagshub - INFO - Repository akshat-0921/security initialized!
