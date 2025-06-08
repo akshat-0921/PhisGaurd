@@ -11,7 +11,6 @@ AWS_REGION = ap-south-1
 AWS_ECR_LOGIN_URI = 602151476685.dkr.ecr.ap-south-1.amazonaws.com
 ECR_REPOSITORY_NAME = networksecurityphising
 
-
 Docker Setup In EC2 commands to be Executed
 #optinal
 
