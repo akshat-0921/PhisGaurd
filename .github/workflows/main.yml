@@ -53,5 +53,5 @@ jobs:
           docker run -d \
             -e DAGSHUB_USERNAME=${{ secrets.DAGSHUB_USERNAME }} \
             -e DAGSHUB_PASSWORD=${{ secrets.DAGSHUB_PASSWORD }} \
-            --name nwksecurityphishing \
+            --name nwksecurityphishing2 \
             602151476685.dkr.ecr.ap-south-1.amazonaws.com/nwksecurityphishing:latest
