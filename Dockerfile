@@ -1,8 +1,17 @@
-FROM python:3.10-slim-buster
+FROM python:4.7-slim-buster
+
+# Set working directory
 WORKDIR /app
+
+# Copy project files
 COPY . /app
 
+# Install dependencies
 RUN apt update -y && apt install awscli -y
+RUN apt-get update && pip install --no-cache-dir -r requirements.txt
 
-RUN apt-get update && pip install -r requirements.txt
-CMD ["python3", "app.py"]
+# Set environment variables (these will be overridden at runtime)
+ENV MLFLOW_TRACKING_URI=https://dagshub.com/akshat-0921/security.mlflow
+
+# Run the app
+CMD ["python", "app.py"]
