@@ -32,7 +32,12 @@ database = client[DATA_INGESTION_DATABASE_NAME]
 collection = database[DATA_INGESTION_COLLECTION_NAME]
 
 app = FastAPI()
-origins = ["*"]
+origins = [
+    "http://13.126.150.65:8080",  # frontend served from here
+    "https://13.126.150.65:8080",  # if using HTTPS later
+    "http://localhost:3000",      # if you test locally
+    "http://127.0.0.1:8000"       # common local dev port
+]
 
 app.add_middleware(
     CORSMiddleware,
