@@ -24,21 +24,14 @@ from sklearn.ensemble import (
 )
 import mlflow
 # from urllib.parse import urlparse
+
 import dagshub
+dagshub.init(repo_owner='akshat-0921', repo_name='security', mlflow=True)
 
-dagshub.init(
-    repo_owner='akshat-0921',
-    repo_name='security',
-    username=os.getenv("DAGSHUB_USERNAME"),
-    password=os.getenv("DAGSHUB_PASSWORD"),
-    mlflow=True
-)
+os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/akshat-0921/security.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"] = os.getenv("DAGSHUB_USERNAME")
+os.environ["MLFLOW_TRACKING_PASSWORD"] = os.getenv("DAGSHUB_PASSWORD")
 
-
-
-# os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/krishnaik06/networksecurity.mlflow"
-# os.environ["MLFLOW_TRACKING_USERNAME"] = "krishnaik06"
-# os.environ["MLFLOW_TRACKING_PASSWORD"] = "7104284f1bb44ece21e0e2adb4e36a250ae3251f"
 
 
 class ModelTrainer:
